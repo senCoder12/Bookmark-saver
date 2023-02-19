@@ -64,7 +64,7 @@ const onDelete = async e => {
     const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
     const bookmarkElementToDelete = document.getElementById("bookmark-"+ bookmarkTime);
 
-    chrome.tabs.sendMessage(activeTab.id , {
+    chrome.tabs.sendMessage(activeTab.id, {
         type: "DELETE",
         value: bookmarkTime
     },viewBookmarks);
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async() => {
             viewBookmarks(currentVideosBookmarks);
         })
     } else {
-        const containeer = document.getElementsByClassName("container");
-        containeer.innerHTML = "<div class='title'>This is not a youtube video page.</div>";
+        const container = document.getElementsByClassName("container");
+        container.innerHTML = "<div class='title'>This is not a youtube video page.</div>";
     }
 });
