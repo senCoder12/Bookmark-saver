@@ -1,5 +1,5 @@
 {
-  "name": "My YT Bookmarks",
+  "name": "My Bookmarks",
   "version": "0.1",
   "description": "Saving timestamps in YT videos",
   "permissions": ["storage", "tabs"],
@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.youtube.com/*"],
-      "js": ["./contentScript.js"]
+      "js": ["contentScript.js"]
     }
   ],
   "web_accessible_resources": [
